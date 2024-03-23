@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|d:\\adv .net\\mid_assignment\\zero hunger v2\\zero hunger v2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|solutionrelative:zero hunger v2\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|d:\\adv .net\\mid_assignment\\zero hunger v2\\zero hunger v2\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|solutionrelative:zero hunger v2\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|d:\\adv .net\\mid_assignment\\zero hunger v2\\zero hunger v2\\models\\restaurantregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|solutionrelative:zero hunger v2\\models\\restaurantregistrationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|d:\\adv .net\\mid_assignment\\zero hunger v2\\zero hunger v2\\views\\foodcollection\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|solutionrelative:zero hunger v2\\views\\foodcollection\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|d:\\adv .net\\mid_assignment\\zero hunger v2\\zero hunger v2\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|solutionrelative:zero hunger v2\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|d:\\adv .net\\mid_assignment\\zero hunger v2\\zero hunger v2\\views\\home\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|solutionrelative:zero hunger v2\\views\\home\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|d:\\adv .net\\mid_assignment\\zero hunger v2\\zero hunger v2\\controllers\\restaurantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|solutionrelative:zero hunger v2\\controllers\\restaurantcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|d:\\adv .net\\mid_assignment\\zero hunger v2\\zero hunger v2\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA881AB9-3DA7-4D5D-85BF-8674820023B5}|Zero Hunger v2\\Zero Hunger v2.csproj|solutionrelative:zero hunger v2\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Views\\FoodCollection\\Index.cshtml",
+              "RelativeDocumentMoniker": "Zero Hunger v2\\Views\\FoodCollection\\Index.cshtml",
+              "ToolTip": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Views\\FoodCollection\\Index.cshtml",
+              "RelativeToolTip": "Zero Hunger v2\\Views\\FoodCollection\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-23T17:02:17.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Views\\Home\\Register.cshtml",
+              "RelativeDocumentMoniker": "Zero Hunger v2\\Views\\Home\\Register.cshtml",
+              "ToolTip": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Views\\Home\\Register.cshtml",
+              "RelativeToolTip": "Zero Hunger v2\\Views\\Home\\Register.cshtml",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-23T16:47:40.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RestaurantRegistrationViewModel.cs",
+              "DocumentMoniker": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Models\\RestaurantRegistrationViewModel.cs",
+              "RelativeDocumentMoniker": "Zero Hunger v2\\Models\\RestaurantRegistrationViewModel.cs",
+              "ToolTip": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Models\\RestaurantRegistrationViewModel.cs",
+              "RelativeToolTip": "Zero Hunger v2\\Models\\RestaurantRegistrationViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T16:46:23.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\DTOs\\UserDTO.cs",
+              "RelativeDocumentMoniker": "Zero Hunger v2\\DTOs\\UserDTO.cs",
+              "ToolTip": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\DTOs\\UserDTO.cs",
+              "RelativeToolTip": "Zero Hunger v2\\DTOs\\UserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T16:18:16.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Zero Hunger v2\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Zero Hunger v2\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAuwGkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:35:44.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Zero Hunger v2\\Views\\Home\\Login.cshtml",
+              "ToolTip": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Zero Hunger v2\\Views\\Home\\Login.cshtml",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-23T15:40:37.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RestaurantController.cs",
+              "DocumentMoniker": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Controllers\\RestaurantController.cs",
+              "RelativeDocumentMoniker": "Zero Hunger v2\\Controllers\\RestaurantController.cs",
+              "ToolTip": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\Controllers\\RestaurantController.cs",
+              "RelativeToolTip": "Zero Hunger v2\\Controllers\\RestaurantController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T15:21:09.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "Zero Hunger v2\\DTOs\\LoginDTO.cs",
+              "ToolTip": "D:\\Adv .Net\\Mid_Assignment\\Zero Hunger v2\\Zero Hunger v2\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "Zero Hunger v2\\DTOs\\LoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T14:37:06.387Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+﻿@model Zero_Hunger_v2.Models.RestaurantRegistrationViewModel
+
+@{
+    ViewBag.Title = "Register Restaurant";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("Register", "Home", FormMethod.Post))
+{
+    <fieldset>
+        <legend>User Information</legend>
+
+        @Html.LabelFor(model => model.User.Username)
+        @Html.TextBoxFor(model => model.User.Username)
+        @Html.ValidationMessageFor(model => model.User.Username)
+        <br /><br />
+        @Html.LabelFor(model => model.User.Email)
+        @Html.TextBoxFor(model => model.User.Email)
+        @Html.ValidationMessageFor(model => model.User.Email)
+        <br /><br />
+        @Html.LabelFor(model => model.User.Password)
+        @Html.PasswordFor(model => model.User.Password)
+        @Html.ValidationMessageFor(model => model.User.Password)
+        <br /><br />
+    </fieldset>
+
+    <fieldset>
+        <legend>Restaurant Information</legend>
+
+        @Html.LabelFor(model => model.Restaurant.Name)
+        @Html.TextBoxFor(model => model.Restaurant.Name)
+        @Html.ValidationMessageFor(model => model.Restaurant.Name)
+        <br /><br />
+        @Html.LabelFor(model => model.Restaurant.Address)
+        @Html.TextBoxFor(model => model.Restaurant.Address)
+        @Html.ValidationMessageFor(model => model.Restaurant.Address)
+        <br /><br />
+        @Html.LabelFor(model => model.Restaurant.ContactNumber)
+        @Html.TextBoxFor(model => model.Restaurant.ContactNumber)
+        @Html.ValidationMessageFor(model => model.Restaurant.ContactNumber)
+        <br /><br />
+        @Html.LabelFor(model => model.Restaurant.TINID)
+        @Html.TextBoxFor(model => model.Restaurant.TINID)
+        @Html.ValidationMessageFor(model => model.Restaurant.TINID)
+        <br /><br />
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+}
+
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
