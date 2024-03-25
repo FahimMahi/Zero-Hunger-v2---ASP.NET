@@ -26,6 +26,7 @@
                             {
                                 if (Session["Role"].Equals("Admin"))
                                 {
+                                    <li>@Html.ActionLink("View Restaurant Details", "ViewListRestaurantDetails", "Admin", new { area = "" }, new { @class = "nav-link" })</li>
                                     <li>@Html.ActionLink("View Food Collections", "ViewFoodCollection", "Admin", new { area = "" }, new { @class = "nav-link" })</li>
                                     <li>@Html.ActionLink("View Employee Details", "ViewEmployeeDetails", "Admin", new { area = "" }, new { @class = "nav-link" })</li>
                                     <li>@Html.ActionLink("View User List", "ViewUserList", "Admin", new { area = "" }, new { @class = "nav-link" })</li>
