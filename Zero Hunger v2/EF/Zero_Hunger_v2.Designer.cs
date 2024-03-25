@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Adv .Net\Mid_Assignment\Zero Hunger v2\Zero Hunger v2\EF\ZeroHunger_v2.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Adv .Net\Mid_Assignment\Zero Hunger v2\Zero Hunger v2\EF\Zero_Hunger_v2.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

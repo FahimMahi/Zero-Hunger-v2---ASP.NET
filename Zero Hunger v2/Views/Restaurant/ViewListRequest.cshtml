@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Zero_Hunger_v2.DTOs.FoodCollectionDTO>
+
+@{
+    ViewBag.Title = "View List Request";
+}
+
+<h2>Food Collection Requests</h2>
+
+<table class="table">
+    <tr>
+        <th>Food Name</th>
+        <th>Amount</th>
+        <th>Max Preserve Time</th>
+        <th>Status</th>
+        <th>Note</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.FoodName)</td>
+            <td>@Html.DisplayFor(modelItem => item.amount)</td>
+            <td>@Html.DisplayFor(modelItem => item.MaxPreserve)</td>
+            <td>@Html.DisplayFor(modelItem => item.Status)</td>
+            <td>@Html.DisplayFor(modelItem => item.Note)</td>
+            <td>
+                @Html.ActionLink("Edit", "UpdateRequest", new { id = item.RID }, new { @class = "btn btn-primary" })
+                @using (Html.BeginForm("DeleteRequest", "Restaurant", FormMethod.Post, new { onsubmit = "return confirm('Are you sure you want to delete this request?');" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.Hidden("id", item.RID)
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+<div>
+    @Html.ActionLink("Back to List", "RestaurantDashboard")
+</div>

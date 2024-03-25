@@ -1,0 +1,52 @@
+﻿@model Zero_Hunger_v2.DTOs.FoodCollectionDTO
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Update Food Collection Request";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("UpdateRequest", "Restaurant", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.RID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FoodName)
+        @Html.EditorFor(model => model.FoodName)
+        @Html.ValidationMessageFor(model => model.FoodName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.amount)
+        @Html.EditorFor(model => model.amount)
+        @Html.ValidationMessageFor(model => model.amount)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.MaxPreserve)
+        @Html.EditorFor(model => model.MaxPreserve)
+        @Html.ValidationMessageFor(model => model.MaxPreserve)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Note)
+        @Html.EditorFor(model => model.Note)
+        @Html.ValidationMessageFor(model => model.Note)
+    </div>
+
+    @Html.HiddenFor(model => model.RID)
+    if (TempData["Msg"] != null)
+    {
+        <div style="color: green;">@TempData["Msg"]</div>
+    }
+
+    <input type="submit" value="Update" class="btn btn-primary" />
+}
+
+
+<div>
+    @Html.ActionLink("Back to List", "ViewListRequest")
+</div>

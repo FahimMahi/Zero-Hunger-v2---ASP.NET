@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "AdminDashboard";
+}
+
+<h2>Admin Dashboard</h2>
+
+<div>
+    <ul>
+        <li>@Html.ActionLink("View Restaurant Details", "ViewListRestaurantDetails","Admin")</li>
+        <li>@Html.ActionLink("View Food Collections", "ViewFoodCollection", "Admin")</li>
+        <li>@Html.ActionLink("View Employee Details", "ViewEmployeeDetails", "Admin")</li>
+        <li>@Html.ActionLink("View User List", "ViewUserList", "Admin")</li>
+        <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+    </ul>
+</div>

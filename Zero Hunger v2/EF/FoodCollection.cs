@@ -25,7 +25,7 @@ namespace Zero_Hunger_v2.EF
         public int amount { get; set; }
         public string MaxPreserve { get; set; }
         public string Status { get; set; }
-        public int AssignedEmpID { get; set; }
+        public Nullable<int> AssignedEmpID { get; set; }
         public Nullable<System.DateTime> CollectionTime { get; set; }
         public Nullable<System.DateTime> CompletionTime { get; set; }
         public string Note { get; set; }

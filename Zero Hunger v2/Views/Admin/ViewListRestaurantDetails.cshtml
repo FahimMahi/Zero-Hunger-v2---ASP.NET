@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Zero_Hunger_v2.DTOs.RestaurantDTO>
+
+@{
+    ViewBag.Title = "Restaurant Details";
+}
+
+<h2>Restaurant Details</h2>
+
+@Html.ActionLink("Add New Restaurant", "AddRestaurant", "Admin", null, new { @class = "btn btn-primary" })
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Contact Number</th>
+            <th>User ID</th>
+            <th>TIN ID</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var restaurant in Model)
+        {
+            <tr>
+                <td>@restaurant.Name</td>
+                <td>@restaurant.Address</td>
+                <td>@restaurant.ContactNumber</td>
+                <td>@restaurant.UserID</td>
+                <td>@restaurant.TINID</td>
+                <td>
+                    @Html.ActionLink("Edit", "EditRestaurant", new { id = restaurant.RestaurantID }, new { @class = "btn btn-default" })
+                    @using (Html.BeginForm("DeleteRestaurant", "Admin", new { id = restaurant.RestaurantID }, FormMethod.Post, new { onsubmit = "return confirm('Are you sure?');" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this restaurant?');" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<div>
+    @Html.ActionLink("Back to Dashboard", "AdminDashboard")
+</div>

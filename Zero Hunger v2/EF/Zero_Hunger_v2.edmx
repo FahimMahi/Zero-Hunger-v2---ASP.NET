@@ -30,7 +30,7 @@
           <Property Name="amount" Type="int" Nullable="false" />
           <Property Name="MaxPreserve" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Status" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="AssignedEmpID" Type="int" Nullable="false" />
+          <Property Name="AssignedEmpID" Type="int" />
           <Property Name="CollectionTime" Type="datetime" />
           <Property Name="CompletionTime" Type="datetime" />
           <Property Name="Note" Type="varchar" MaxLength="50" Nullable="false" />
@@ -47,7 +47,7 @@
           <Property Name="Distributednumber" Type="int" Nullable="false" />
           <Property Name="notes" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="RID" Type="int" Nullable="false" />
-          <Property Name="EmpID" Type="int" Nullable="false" />
+          <Property Name="EmpID" Type="int" />
         </EntityType>
         <EntityType Name="Restaurants">
           <Key>
@@ -83,7 +83,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_FoodCollections_Employees">
-          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
           <End Role="FoodCollections" Type="Self.FoodCollections" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employees">
@@ -107,7 +107,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_FoodDistributers_Employees">
-          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employees" Multiplicity="0..1" />
           <End Role="FoodDistributers" Type="Self.FoodDistributers" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employees">
@@ -206,7 +206,7 @@
           <Property Name="amount" Type="Int32" Nullable="false" />
           <Property Name="MaxPreserve" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="AssignedEmpID" Type="Int32" Nullable="false" />
+          <Property Name="AssignedEmpID" Type="Int32" />
           <Property Name="CollectionTime" Type="DateTime" Precision="3" />
           <Property Name="CompletionTime" Type="DateTime" Precision="3" />
           <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
@@ -226,7 +226,7 @@
           <Property Name="Distributednumber" Type="Int32" Nullable="false" />
           <Property Name="notes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="RID" Type="Int32" Nullable="false" />
-          <Property Name="EmpID" Type="Int32" Nullable="false" />
+          <Property Name="EmpID" Type="Int32" />
           <NavigationProperty Name="Employee" Relationship="Self.FK_FoodDistributers_Employees" FromRole="FoodDistributers" ToRole="Employees" />
           <NavigationProperty Name="FoodCollection" Relationship="Self.FK_FoodDistributers_FoodCollections" FromRole="FoodDistributers" ToRole="FoodCollections" />
         </EntityType>
@@ -268,7 +268,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_FoodCollections_Employees">
-          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
           <End Role="FoodCollections" Type="Self.FoodCollection" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employees">
@@ -280,7 +280,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_FoodDistributers_Employees">
-          <End Role="Employees" Type="Self.Employee" Multiplicity="1" />
+          <End Role="Employees" Type="Self.Employee" Multiplicity="0..1" />
           <End Role="FoodDistributers" Type="Self.FoodDistributer" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employees">

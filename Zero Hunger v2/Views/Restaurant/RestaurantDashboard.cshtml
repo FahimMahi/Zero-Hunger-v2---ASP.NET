@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "RestaurantDashboard";
+}
+
+<h2>Restaurant Dashboard</h2>
+
+<div class="dashboard-features">
+    <ul>
+        <li><a href="@Url.Action("EditRestaurantInfo", "Restaurant")">Manage Restaurant Information</a></li>
+        <li><a href="@Url.Action("CreateRequest", "Restaurant")">Create a Collection Request</a></li>
+        <li><a href="@Url.Action("ViewListRequest", "Restaurant")">View My Collection Requests</a></li>
+        @*<li><a href="@Url.Action("EditUserProfile", "Home")">Update My Account Details</a></li>*@
+        <li><a href="@Url.Action("Logout", "Home")">Logout</a></li>
+    </ul>
+</div>
+

@@ -1,0 +1,35 @@
+﻿@model Zero_Hunger_v2.DTOs.FoodCollectionDTO
+@{
+    ViewBag.Title = "UpdateRequestStatus";
+}
+
+<h2>UpdateRequestStatus</h2>
+
+@if (Model.Status != "Collected")
+{
+    using (Html.BeginForm("UpdateRequestStatus", "Employee", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.RID)
+
+        <p>
+            Are you sure you want to mark the following request as Collected?
+        </p>
+
+        <div>
+            <strong>Food Name:</strong> @Html.DisplayFor(model => model.FoodName)<br />
+            <strong>Amount:</strong> @Html.DisplayFor(model => model.amount)<br />
+            <strong>Max Preserve Time:</strong> @Html.DisplayFor(model => model.MaxPreserve)<br />
+            <strong>Status:</strong> @Html.DisplayFor(model => model.Status)<br />
+            <strong>Note:</strong> @Html.DisplayFor(model => model.Note)
+        </div>
+
+        <button type="submit" class="btn btn-success">Mark as Collected</button>
+    }
+}
+else
+{
+    <div class="alert alert-info" role="alert">
+        This request has already been marked as Collected.
+    </div>
+}

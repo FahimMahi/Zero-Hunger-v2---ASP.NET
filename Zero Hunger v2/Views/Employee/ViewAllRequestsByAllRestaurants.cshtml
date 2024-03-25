@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Zero_Hunger_v2.DTOs.FoodCollectionDTO>
+
+@{
+    ViewBag.Title = "ViewAllRequestsByAllRestaurants";
+}
+
+<h2>ViewAllRequestsByAllRestaurants</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Food Name</th>
+            <th>Amount</th>
+            <th>Max Preserve Time</th>
+            <th>Status</th>
+            <th>Collection Time</th>
+            <th>Completion Time</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.FoodName)</td>
+                <td>@Html.DisplayFor(modelItem => item.amount)</td>
+                <td>@Html.DisplayFor(modelItem => item.MaxPreserve)</td>
+                <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                <td>@Html.DisplayFor(modelItem => item.CollectionTime)</td>
+                <td>@Html.DisplayFor(modelItem => item.CompletionTime)</td>
+                <td>
+
+                    @if (item.Status == "Pending")
+                    {
+                        using (Html.BeginForm("UpdateRequestStatus", "Employee", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.Hidden("requestId", item.RID)
+                            <button type="submit" class="btn btn-success">Mark as Collected</button>
+                        }
+                    }
+                    else if (item.Status == "Collected")
+                    {
+                        using (Html.BeginForm("UpdateRequestStatus", "Employee", FormMethod.Post))
+                        {
+                            @Html.AntiForgeryToken()
+                            @Html.Hidden("requestId", item.RID)
+                            <button type="submit" class="btn btn-success">Mark as Distributed</button>
+                        }
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Back to Dashboard", "EmployeeDashboard")
+</div>

@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeDashboard";
+}
+
+<h2>EmployeeDashboard</h2>
+
+<ul>
+    <li><a href="@Url.Action("EditEmployeeDetails", "Employee")">Edit My Details</a></li>
+    <li><a href="@Url.Action("ViewAllRequestsByAllRestaurants", "Employee")">View All Requests by All Restaurants</a></li>
+    @*<li><a href="@Url.Action("CreateFoodDistribution", "Employee")">Create Food Distribution</a></li>*@
+    <li><a href="@Url.Action("Logout", "Home")">Logout</a></li>
+</ul>

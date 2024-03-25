@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Zero_Hunger_v2.DTOs.UserDTO>
+
+@{
+    ViewBag.Title = "ViewUserList";
+}
+<h2>User List</h2>
+
+<p>
+    @Html.ActionLink("Add New User", "AddUser", "Admin", null, new { @class = "btn btn-primary" })
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Role</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => user.Username)</td>
+                <td>@Html.DisplayFor(modelItem => user.Password)</td>
+                <td>@Html.DisplayFor(modelItem => user.Role)</td>
+                <td>@Html.DisplayFor(modelItem => user.Email)</td>
+                <td>
+                    @Html.ActionLink("Edit", "EditUser", new { id = user.UserID }, new { @class = "btn btn-default btn-sm" })
+
+                    @using (Html.BeginForm("DeleteUser", "Admin", FormMethod.Post, new { onsubmit = "return confirm('Are you sure you want to delete this user?');" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("id", user.UserID)
+                        <input type="submit" value="Delete" class="btn btn-danger btn-sm" />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<div>
+    @Html.ActionLink("Back to Dashboard", "AdminDashboard")
+</div>

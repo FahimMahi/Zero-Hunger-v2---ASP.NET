@@ -1,0 +1,74 @@
+﻿@model Zero_Hunger_v2.DTOs.EmployeeDTO
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Edit Employee";
+}
+
+<h2>Edit Employee</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.EmployeeID)
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    <!-- Repeat for other properties like Address, PhoneNumber, etc. -->
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.DOB)
+        @Html.TextBoxFor(m => m.DOB, "{0:yyyy-MM-dd}", new { @class = "form-control", type = "date" })
+        @Html.ValidationMessageFor(m => m.DOB)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Gender)
+        @Html.TextBoxFor(m => m.Gender, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Gender)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Address)
+        @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Address)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.PhoneNumber)
+        @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.PhoneNumber)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Nationality)
+        @Html.TextBoxFor(m => m.Nationality, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Nationality)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Religion)
+        @Html.TextBoxFor(m => m.Religion, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Religion)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.BloodGroup)
+        @Html.TextBoxFor(m => m.BloodGroup, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.BloodGroup)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.nid)
+        @Html.TextBoxFor(m => m.nid, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.nid)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    @Html.ActionLink("Cancel", "ViewEmployeeDetails", null, new { @class = "btn btn-default" })
+}

@@ -20,7 +20,7 @@ namespace Zero_Hunger_v2.EF
         public int Distributednumber { get; set; }
         public string notes { get; set; }
         public int RID { get; set; }
-        public int EmpID { get; set; }
+        public Nullable<int> EmpID { get; set; }
     
         public virtual Employee Employee { get; set; }
         public virtual FoodCollection FoodCollection { get; set; }

@@ -10,15 +10,51 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
-            @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            @Html.ActionLink("Zero Hunger v2", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    @{
+
+                        if (Session["UserID"] != null)
+                        {
+
+                            if (Session["Role"] != null)
+                            {
+                                if (Session["Role"].Equals("Admin"))
+                                {
+                                    <li>@Html.ActionLink("View Food Collections", "ViewFoodCollection", "Admin", new { area = "" }, new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("View Employee Details", "ViewEmployeeDetails", "Admin", new { area = "" }, new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("View User List", "ViewUserList", "Admin", new { area = "" }, new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                                }
+                                if (Session["Role"].Equals("Restaurant"))
+                                {
+                                    <li>@Html.ActionLink("EditRestaurantInfo", "EditRestaurantInfo", "Restaurant", new { area = "" }, new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("CreateRequest", "CreateRequest", "Restaurant", new { area = "" }, new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("ViewListRequest", "ViewListRequest", "Restaurant", new { area = "" }, new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                                }
+
+                                if (Session["Role"].Equals("Employee"))
+                                {
+                                    <li>@Html.ActionLink("EditEmployeeDetails", "EditEmployeeDetails", "Employee", new { area = "" }, new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("ViewAllRequestsByAllRestaurants", "ViewAllRequestsByAllRestaurants", "Employee", new { area = "" }, new { @class = "nav-link" })</li>
+                                    <li>@Html.ActionLink("Logout", "Logout", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                                }
+                            }
+                        }
+
+                        else
+                        {
+                            <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Login", "Login", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Register", "Register", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                    }
                 </ul>
             </div>
         </div>

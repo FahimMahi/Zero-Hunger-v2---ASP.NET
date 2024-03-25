@@ -1,0 +1,46 @@
+﻿@model Zero_Hunger_v2.DTOs.RestaurantDTO
+
+@{
+    ViewBag.Title = "Edit Restaurant Details";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("EditRestaurant", "Admin", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(model => model.RestaurantID)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Address)
+        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Address)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ContactNumber)
+        @Html.TextBoxFor(model => model.ContactNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.ContactNumber)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.UserID) // This is usually not edited but displayed for reference
+        @Html.TextBoxFor(model => model.UserID)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TINID)
+        @Html.TextBoxFor(model => model.TINID, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.TINID)
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+    @Html.ActionLink("Cancel", "ViewListRestaurantDetails", null, new { @class = "btn btn-default" })
+}

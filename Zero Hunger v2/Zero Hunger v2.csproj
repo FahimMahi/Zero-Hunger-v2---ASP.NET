@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\FoodCollectionController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -139,34 +140,34 @@
     <Compile Include="DTOs\RestaurantDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="EF\Employee.cs">
-      <DependentUpon>ZeroHunger_v2.tt</DependentUpon>
+      <DependentUpon>Zero_Hunger_v2.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\FoodCollection.cs">
-      <DependentUpon>ZeroHunger_v2.tt</DependentUpon>
+      <DependentUpon>Zero_Hunger_v2.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\FoodDistributer.cs">
-      <DependentUpon>ZeroHunger_v2.tt</DependentUpon>
+      <DependentUpon>Zero_Hunger_v2.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\Restaurant.cs">
-      <DependentUpon>ZeroHunger_v2.tt</DependentUpon>
+      <DependentUpon>Zero_Hunger_v2.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\User.cs">
-      <DependentUpon>ZeroHunger_v2.tt</DependentUpon>
+      <DependentUpon>Zero_Hunger_v2.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\ZeroHunger_v2.Context.cs">
+    <Compile Include="EF\Zero_Hunger_v2.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ZeroHunger_v2.Context.tt</DependentUpon>
+      <DependentUpon>Zero_Hunger_v2.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\ZeroHunger_v2.cs">
+    <Compile Include="EF\Zero_Hunger_v2.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ZeroHunger_v2.tt</DependentUpon>
+      <DependentUpon>Zero_Hunger_v2.tt</DependentUpon>
     </Compile>
-    <Compile Include="EF\ZeroHunger_v2.Designer.cs">
+    <Compile Include="EF\Zero_Hunger_v2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ZeroHunger_v2.edmx</DependentUpon>
+      <DependentUpon>Zero_Hunger_v2.edmx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -191,15 +192,15 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="EF\ZeroHunger_v2.Context.tt">
+    <Content Include="EF\Zero_Hunger_v2.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ZeroHunger_v2.Context.cs</LastGenOutput>
-      <DependentUpon>ZeroHunger_v2.edmx</DependentUpon>
+      <DependentUpon>Zero_Hunger_v2.edmx</DependentUpon>
+      <LastGenOutput>Zero_Hunger_v2.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="EF\ZeroHunger_v2.tt">
+    <Content Include="EF\Zero_Hunger_v2.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ZeroHunger_v2.edmx</DependentUpon>
-      <LastGenOutput>ZeroHunger_v2.cs</LastGenOutput>
+      <DependentUpon>Zero_Hunger_v2.edmx</DependentUpon>
+      <LastGenOutput>Zero_Hunger_v2.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -210,12 +211,12 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="EF\ZeroHunger_v2.edmx">
+    <EntityDeploy Include="EF\Zero_Hunger_v2.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ZeroHunger_v2.Designer.cs</LastGenOutput>
+      <LastGenOutput>Zero_Hunger_v2.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="EF\ZeroHunger_v2.edmx.diagram">
-      <DependentUpon>ZeroHunger_v2.edmx</DependentUpon>
+    <Content Include="EF\Zero_Hunger_v2.edmx.diagram">
+      <DependentUpon>Zero_Hunger_v2.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -239,16 +240,40 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\FoodCollection\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Register.cshtml" />
+    <Content Include="Views\Restaurant\RestaurantDashboard.cshtml" />
+    <Content Include="Views\Restaurant\CreateRequest.cshtml" />
+    <Content Include="Views\Restaurant\EditRestaurantInfo.cshtml" />
+    <Content Include="Views\Home\EditUserProfile.cshtml" />
+    <Content Include="Views\Restaurant\ViewListRequest.cshtml" />
+    <Content Include="Views\Restaurant\UpdateRequest.cshtml" />
+    <Content Include="Views\Restaurant\DeleteRequest.cshtml" />
+    <Content Include="Views\Home\Logout.cshtml" />
+    <Content Include="Views\Employee\EmployeeDashboard.cshtml" />
+    <Content Include="Views\Employee\EditEmployeeDetails.cshtml" />
+    <Content Include="Views\Employee\ViewAllRequestsByAllRestaurants.cshtml" />
+    <Content Include="Views\Employee\UpdateRequestStatus.cshtml" />
+    <Content Include="Views\Employee\CreateFoodDistribution.cshtml" />
+    <Content Include="Views\Admin\AdminDashboard.cshtml" />
+    <Content Include="Views\Admin\ViewUserList.cshtml" />
+    <Content Include="Views\Admin\EditUser.cshtml" />
+    <Content Include="Views\Admin\AddUser.cshtml" />
+    <Content Include="Views\Admin\DeleteUser.cshtml" />
+    <Content Include="Views\Admin\ViewEmployeeDetails.cshtml" />
+    <Content Include="Views\Admin\EditEmployee.cshtml" />
+    <Content Include="Views\Admin\DeleteEmployee.cshtml" />
+    <Content Include="Views\Admin\AddEmployee.cshtml" />
+    <Content Include="Views\Admin\ViewFoodCollection.cshtml" />
+    <Content Include="Views\Admin\ViewListRestaurantDetails.cshtml" />
+    <Content Include="Views\Admin\AddRestaurant.cshtml" />
+    <Content Include="Views\Admin\EditRestaurant.cshtml" />
+    <Content Include="Views\Admin\DeleteRestaurant.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Employee\" />
-    <Folder Include="Views\Restaurant\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

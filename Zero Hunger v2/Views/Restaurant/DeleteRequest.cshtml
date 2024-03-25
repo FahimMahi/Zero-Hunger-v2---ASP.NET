@@ -1,0 +1,36 @@
+﻿@model Zero_Hunger_v2.DTOs.FoodCollectionDTO
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Delete Food Collection Request";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">Warning!</h4>
+    <p>Are you sure you want to delete the following food collection request?</p>
+    <hr>
+    <dl class="row">
+        <dt class="col-sm-3">Food Name:</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.FoodName)</dd>
+
+        <dt class="col-sm-3">Amount:</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.amount)</dd>
+
+        <dt class="col-sm-3">Preservation Time:</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.MaxPreserve)</dd>
+
+        <dt class="col-sm-3">Note:</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Note)</dd>
+    </dl>
+</div>
+
+@using (Html.BeginForm("DeleteRequest", "Restaurant", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.RID)
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+    @Html.ActionLink("Cancel", "ViewListRequest", null, new { @class = "btn btn-secondary" })
+}

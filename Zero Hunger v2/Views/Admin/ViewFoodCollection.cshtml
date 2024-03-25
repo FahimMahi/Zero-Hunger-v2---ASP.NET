@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Zero_Hunger_v2.DTOs.FoodCollectionDTO>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Food Collection List";
+}
+
+<h2>Food Collection List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Food Name</th>
+            <th>Amount</th>
+            <th>Max Preserve</th>
+            <th>Status</th>
+            <th>Assigned Employee ID</th>
+            <th>Collection Time</th>
+            <th>Completion Time</th>
+            <th>Note</th>
+            <th>Restaurant ID</th>
+            <th>Request Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.FoodName</td>
+                <td>@item.amount</td>
+                <td>@item.MaxPreserve</td>
+                <td>@item.Status</td>
+                <td>@item.AssignedEmpID</td>
+                <td>@item.CollectionTime</td>
+                <td>@item.CompletionTime</td>
+                <td>@item.Note</td>
+                <td>@item.RestID</td>
+                <td>@item.RequestTime.ToString("g")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    @Html.ActionLink("Back to Dashboard", "AdminDashboard")
+</div>
