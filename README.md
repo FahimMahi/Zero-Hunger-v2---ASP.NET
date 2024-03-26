@@ -12,7 +12,7 @@
 
 ### Database Design
 
-1. Users
+##### **1. Users**
 
 * **UserID (PK)**
 * **Username**
@@ -20,7 +20,7 @@
 * **Email**
 * **Role (Enum: Admin, Restaurant, Employee)**
 
-2. Restaurants
+##### **2. Restaurants**
 
 * **RestaurantID (PK)**
 * **UserID (FK to Users.UserID)**
@@ -29,9 +29,9 @@
 * **ContactNumber**
 * **TINID**
 
-3. Employees
+##### **3. Employees**
 
-* **EmployeeID (PK)***
+* **EmployeeID (PK)**
 * **Name**
 * **Nationality**
 * **PhoneNumber**
@@ -43,7 +43,7 @@
 * **Gender**
 * **UserID (FK to Users.UserID)**
 
-4. FoodCollection
+##### **4. FoodCollection**
 
 * **RID (PK)**
 * **RequestTime**
